@@ -1,4 +1,4 @@
-package odin_gl
+package odingl
 
 #assert(size_of(bool) == size_of(u8))
 

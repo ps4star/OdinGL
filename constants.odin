@@ -1,4 +1,4 @@
-package odin_gl
+package odingl
 
 FALSE                          :: false
 TRUE                           :: true
@@ -14,6 +14,9 @@ TRIANGLES                      :: 0x0004
 TRIANGLE_STRIP                 :: 0x0005
 TRIANGLE_FAN                   :: 0x0006
 QUADS                          :: 0x0007
+QUAD_STRIP                     :: 0x0008
+POLYGON                        :: 0x0009
+
 NEVER                          :: 0x0200
 LESS                           :: 0x0201
 EQUAL                          :: 0x0202

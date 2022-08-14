@@ -1,4 +1,4 @@
-package odin_gl
+package odingl
 
 loaded_up_to: [2]int
 loaded_up_to_major := 0
@@ -501,7 +501,7 @@ load_2_0 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_VertexAttribPointer,      "glVertexAttribPointer")
 
 	// OdinGL additions
-	set_proc_address(&impl_Color4f,                  "glVertex2f")
+	set_proc_address(&impl_Color4f,                  "glColor4f")
 	set_proc_address(&impl_Vertex2f,                 "glVertex2f")
 	set_proc_address(&impl_Begin,                    "glBegin")
 	set_proc_address(&impl_End,                      "glEnd")

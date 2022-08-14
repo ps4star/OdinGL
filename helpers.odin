@@ -1,4 +1,4 @@
-package odin_gl
+package odingl
 
 // Helper for loading shaders into a program
 

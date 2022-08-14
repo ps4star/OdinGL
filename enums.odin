@@ -1,4 +1,4 @@
-package odin_gl
+package odingl
 
 GL_Enum :: enum u64 {
 	FALSE = 0, 
@@ -14,6 +14,8 @@ GL_Enum :: enum u64 {
 	TRIANGLES = TRIANGLES, 
 	TRIANGLE_STRIP = TRIANGLE_STRIP, 
 	TRIANGLE_FAN = TRIANGLE_FAN, 
+	QUAD_STRIP = QUAD_STRIP,
+	POLYGON = POLYGON,
 	QUADS = QUADS, 
 	NEVER = NEVER, 
 	LESS = LESS, 
