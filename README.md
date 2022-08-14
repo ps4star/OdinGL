@@ -2,6 +2,8 @@
 
 Custom Odin OpenGL bindings that extend the official vendor ones. Expose extra legacy procs.
 
+Please install this into your `shared` folder found in the Odin compiler location (same dir as `odin` EXE).
+
 
 # --- BELOW IS ORIGINAL README (from Odin/vendor/OpenGL) ---
 # odin-gl: opengl loader in Odin
