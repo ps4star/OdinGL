@@ -404,6 +404,7 @@ impl_Color4f:                  proc "c" (r, g, b, a: f32)
 impl_Vertex2f:                 proc "c" (x, y: f32)
 impl_Begin:                    proc "c" (mode: u32)
 impl_End:                      proc "c" ()
+impl_TexCoord2i:               proc "c" (x, y: i32)
 
 load_2_0 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_BlendEquationSeparate,    "glBlendEquationSeparate")
@@ -505,6 +506,7 @@ load_2_0 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_Vertex2f,                 "glVertex2f")
 	set_proc_address(&impl_Begin,                    "glBegin")
 	set_proc_address(&impl_End,                      "glEnd")
+	set_proc_address(&impl_TexCoord2i,               "glTexCoord2i")
 }
 
 

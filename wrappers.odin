@@ -217,6 +217,7 @@ when !ODIN_DEBUG {
 	Vertex2f                 :: proc "c" (x, y: f32)                                                                                   {        impl_Vertex2f(x, y)                                                                   }
 	Begin                    :: proc "c" (mode: u32)                                                                                   {        impl_Begin(mode)                                                                      }
 	End                      :: proc "c" ()                                                                                            {        impl_End()                                                                            }
+	TexCoord2i               :: proc "c" (x, y: i32)                                                                                   {        impl_TexCoord2i(x, y)                                                                 }
 
 	// VERSION_2_1
 	UniformMatrix2x3fv :: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32) { impl_UniformMatrix2x3fv(location, count, transpose, value) }
