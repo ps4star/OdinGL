@@ -400,12 +400,6 @@ impl_VertexAttrib4uiv:         proc "c" (index: u32, v: ^[4]u32)
 impl_VertexAttrib4usv:         proc "c" (index: u32, v: ^[4]u16)
 impl_VertexAttribPointer:      proc "c" (index: u32, size: i32, type: u32, normalized: bool, stride: i32, pointer: uintptr)
 
-impl_Color4f:                  proc "c" (r, g, b, a: f32)
-impl_Vertex2f:                 proc "c" (x, y: f32)
-impl_Begin:                    proc "c" (mode: u32)
-impl_End:                      proc "c" ()
-impl_TexCoord2i:               proc "c" (x, y: i32)
-
 load_2_0 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_BlendEquationSeparate,    "glBlendEquationSeparate")
 	set_proc_address(&impl_DrawBuffers,              "glDrawBuffers")
@@ -500,13 +494,6 @@ load_2_0 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_VertexAttrib4uiv,         "glVertexAttrib4uiv")
 	set_proc_address(&impl_VertexAttrib4usv,         "glVertexAttrib4usv")
 	set_proc_address(&impl_VertexAttribPointer,      "glVertexAttribPointer")
-
-	// OdinGL additions
-	set_proc_address(&impl_Color4f,                  "glColor4f")
-	set_proc_address(&impl_Vertex2f,                 "glVertex2f")
-	set_proc_address(&impl_Begin,                    "glBegin")
-	set_proc_address(&impl_End,                      "glEnd")
-	set_proc_address(&impl_TexCoord2i,               "glTexCoord2i")
 }
 
 
@@ -1650,4 +1637,3 @@ load_4_6 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_MultiDrawElementsIndirectCount, "glMultiDrawElementsIndirectCount")
 	set_proc_address(&impl_PolygonOffsetClamp,             "glPolygonOffsetClamp")
 }
-

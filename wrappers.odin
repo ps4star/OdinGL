@@ -2,7 +2,7 @@ package odingl
 
 #assert(size_of(bool) == size_of(u8))
 
-when !ODIN_DEBUG {
+when !GL_DEBUG {
 	// VERSION_1_0
 	CullFace               :: proc "c" (mode: u32)                                                                                         {        impl_CullFace(mode)                                                                         }
 	FrontFace              :: proc "c" (mode: u32)                                                                                         {        impl_FrontFace(mode)                                                                        }
@@ -211,13 +211,6 @@ when !ODIN_DEBUG {
 	VertexAttrib4uiv         :: proc "c" (index: u32, v: ^[4]u32)                                                                      {        impl_VertexAttrib4uiv(index, v)                                                       }
 	VertexAttrib4usv         :: proc "c" (index: u32, v: ^[4]u16)                                                                      {        impl_VertexAttrib4usv(index, v)                                                       }
 	VertexAttribPointer      :: proc "c" (index: u32, size: i32, type: u32, normalized: bool, stride: i32, pointer: uintptr)           {        impl_VertexAttribPointer(index, size, type, normalized, stride, pointer)             }
-
-	// OdinGL additions
-	Color4f                  :: proc "c" (r, g, b, a: f32)                                                                             {        impl_Color4f(r, g, b, a)                                                              }
-	Vertex2f                 :: proc "c" (x, y: f32)                                                                                   {        impl_Vertex2f(x, y)                                                                   }
-	Begin                    :: proc "c" (mode: u32)                                                                                   {        impl_Begin(mode)                                                                      }
-	End                      :: proc "c" ()                                                                                            {        impl_End()                                                                            }
-	TexCoord2i               :: proc "c" (x, y: i32)                                                                                   {        impl_TexCoord2i(x, y)                                                                 }
 
 	// VERSION_2_1
 	UniformMatrix2x3fv :: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32) { impl_UniformMatrix2x3fv(location, count, transpose, value) }
