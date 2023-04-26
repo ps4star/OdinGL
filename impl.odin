@@ -504,6 +504,10 @@ impl_UniformMatrix2x4fv: proc "c" (location: i32, count: i32, transpose: bool, v
 impl_UniformMatrix4x2fv: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32)
 impl_UniformMatrix3x4fv: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32)
 impl_UniformMatrix4x3fv: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32)
+impl_Scalef			   : proc "c" (f1, f2, f3: f32)
+impl_MatrixMode		   : proc "c" (mode: u32)
+impl_LoadIdentity	   : proc "c" ()
+impl_PixelZoom		   : proc "c" (xf, yf: f32)
 
 load_2_1 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_UniformMatrix2x3fv, "glUniformMatrix2x3fv")
@@ -512,6 +516,10 @@ load_2_1 :: proc(set_proc_address: Set_Proc_Address_Type) {
 	set_proc_address(&impl_UniformMatrix4x2fv, "glUniformMatrix4x2fv")
 	set_proc_address(&impl_UniformMatrix3x4fv, "glUniformMatrix3x4fv")
 	set_proc_address(&impl_UniformMatrix4x3fv, "glUniformMatrix4x3fv")
+	set_proc_address(&impl_Scalef, "glScalef")
+	set_proc_address(&impl_MatrixMode, "glMatrixMode")
+	set_proc_address(&impl_LoadIdentity, "glLoadIdentity")
+	set_proc_address(&impl_PixelZoom, "glPixelZoom")
 }
 
 

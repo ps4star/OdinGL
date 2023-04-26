@@ -219,6 +219,10 @@ when !GL_DEBUG {
 	UniformMatrix4x2fv :: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32) { impl_UniformMatrix4x2fv(location, count, transpose, value) }
 	UniformMatrix3x4fv :: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32) { impl_UniformMatrix3x4fv(location, count, transpose, value) }
 	UniformMatrix4x3fv :: proc "c" (location: i32, count: i32, transpose: bool, value: [^]f32) { impl_UniformMatrix4x3fv(location, count, transpose, value) }
+	Scalef		 	   :: proc "c" (f1, f2, f3: f32)										   { impl_Scalef(f1, f2, f3) }
+	MatrixMode		   :: proc "c" (mode: u32)												   { impl_MatrixMode(mode) }
+	LoadIdentity	   :: proc "c" ()														   { impl_LoadIdentity() }
+	PixelZoom		   :: proc "c" (xf, yf: f32)											   { impl_PixelZoom(xf, yf) }
 
 
 	// VERSION_3_0
